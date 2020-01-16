@@ -14,4 +14,14 @@ public class Consumer {
     public void consume(String message) {
         log.info("MESSAGE CONSUMER ===== {}", message);
     }
+
+    @KafkaListener(topics = "testTopic", groupId = "group-id")
+    public void consume2(String message) {
+        log.info("MESSAGE CONSUMER2 ===== {}", message);
+    }
+
+    @KafkaListener(topics = "testTopic", groupId = "group-id")
+    public void consume3(String message) {
+        log.info("MESSAGE CONSUMER3 ===== {}", message);
+    }
 }

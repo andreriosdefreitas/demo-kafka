@@ -18,7 +18,7 @@ public class Producer {
     }
 
     public void sendEvent(String message) {
-        log.info("MESSAGE PRODUCER ===== {}", message);
+        //log.info("MESSAGE PRODUCER ===== {}", message);
         this.kafkaTemplate.send("testTopic", message);
     }
 }
